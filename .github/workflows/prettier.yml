@@ -52,6 +52,6 @@ jobs:
                   git commit -m "chore(domains): prettier"
                   git push --set-upstream origin "$BRANCH"
 
-                  gh pr create -l maintainer -t "chore(domains): prettier" -b "$COUNT file(s) have been prettified."
+                  gh pr create -t "chore(domains): prettier" -b "$COUNT file(s) have been prettified."
               env:
-                  GH_TOKEN: ${{ secrets.BOT }}
+                  GH_TOKEN: ${{ github.token }}
